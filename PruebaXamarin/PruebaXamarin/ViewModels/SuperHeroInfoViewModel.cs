@@ -2,6 +2,7 @@
 {
     using PruebaXamarin.Models;
     using PruebaXamarin.Sevices;
+    using System;
 
     public class SuperHeroInfoViewModel : BaseViewModel
     {
@@ -9,9 +10,11 @@
         private ApiService apiService;
         #endregion
 
+
         #region Attributes
         private Result heroInfo;
         private bool isRefreshing;
+        private string img;
         //private ObservableCollection<Doc> articleObsCol;
         #endregion
 
@@ -27,6 +30,12 @@
             get { return this.heroInfo; }
             set { SetValue(ref this.heroInfo, value); }
         }
+
+        public string Img
+        {
+            get { return this.img; }
+            set { SetValue(ref this.img, value); }
+        }
         #endregion
 
         #region Constructor
@@ -34,6 +43,8 @@
         {
             this.apiService = new ApiService();
             this.HerosIfo = herosInfo;
+            this.Img = String.Format("{0}.{1}", herosInfo.Thumbnail.Path, herosInfo.Thumbnail.Extension);
+
         }
         #endregion
     }

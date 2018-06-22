@@ -8,6 +8,7 @@ namespace PruebaXamarin.ViewModels
 {
     public class MarvelItemViewModel: Result
     {
+
         #region Commands
         public ICommand SelectHeroCommand
         {

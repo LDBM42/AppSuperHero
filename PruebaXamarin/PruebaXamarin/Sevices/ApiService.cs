@@ -29,7 +29,7 @@
             //revisa si responde al cargar google.com o cualquiera especificada
 
             var isReachable = await CrossConnectivity.Current.IsRemoteReachable(
-                "https://www.google.com/", 80, 10000);
+                "https://www.google.com/", 80, 30000);
 
             if (!isReachable)
             {
@@ -82,7 +82,7 @@
                 var client = new HttpClient();
                 client.BaseAddress = new Uri(urlBase);
                 var url = string.Format(
-                    "/v1/public/characters?apikey=af849a4e3f7d57e8a46e2da8bbe200fe&ts=9&hash=fb89b56f5f8517935b8f819b8137dcc2&name={0}",
+                    "/v1/public/characters?nameStartsWith={0}&apikey=af849a4e3f7d57e8a46e2da8bbe200fe&ts=9&hash=fb89b56f5f8517935b8f819b8137dcc2",
                     search);
                 var response = await client.GetAsync(url);
 

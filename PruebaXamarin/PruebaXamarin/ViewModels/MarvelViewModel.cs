@@ -141,7 +141,7 @@
             this.ToSuperHeroItemViewModel());
 
             
-           this.Img = String.Format("{0}.{1}", marvel.Data.Results[0].Thumbnail.Path, marvel.Data.Results[0].Thumbnail.Extension);
+           //this.Img = String.Format("{0}.{1}", marvel.Data.Results[0].Thumbnail.Path, marvel.Data.Results[0].Thumbnail.Extension);
 
             this.IsRefreshing = false;
         }

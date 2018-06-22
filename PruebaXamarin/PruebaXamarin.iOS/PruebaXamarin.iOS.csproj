@@ -165,4 +165,10 @@
       <Name>PruebaXamarin</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MarvelLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MarvelCharacters.png" />
+  </ItemGroup>
 </Project>
